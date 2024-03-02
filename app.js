@@ -133,3 +133,12 @@
 // } 
 // sayHello();
 //  11- NEVER ----------------------------------------------------------
+// function throwError (errorMsg: string ) : never {
+//   throw new Error(errorMsg);
+// }
+// throwError("Hata");
+// -----------------------------------------------------------------------
+// TYPE INFERENCE 
+// Data type ını yazmamama rağmen geliyor.
+var sayac = 0;
+console.log(typeof (sayac));
