@@ -130,7 +130,7 @@
 // let can = "can";
 //   console.log("selam dünya");
 // return can;
-// } 
+// }
 // sayHello();
 //  11- NEVER ----------------------------------------------------------
 // function throwError (errorMsg: string ) : never {
@@ -138,7 +138,72 @@
 // }
 // throwError("Hata");
 // -----------------------------------------------------------------------
-// TYPE INFERENCE 
-// Data type ını yazmamama rağmen geliyor.
-var sayac = 0;
-console.log(typeof (sayac));
+// ------------- If Else Ternary Operator--------------------------------
+// let x : number = 45;
+// let y : number = 45;
+// if(x > y)
+// {
+//   console.log("X Y DEN BÜYÜKTÜR.");
+// }
+// else if (x < y){
+//   console.log("X Y DEN KÜÇÜKTÜR.")
+// }
+// else{
+//   console.log(" X VE Y EŞİTTİR.")
+// }
+// x > y ?  console.log("X Y DEN BÜYÜKTÜR.") : console.log("X Y DEN KÜÇÜKTÜR.") : console.log(" X VE Y EŞİTTİR.")
+// ---------------SWITCH CASE--------------------------
+// let day: number = 5;
+// switch (day) {
+//   case 0:
+//     console.log("Pazar");
+//     break;
+//   case 1:
+//     console.log("Pazartesi");
+//     break;
+//   case 2:
+//     console.log("salı");
+//     break;
+//   case 3:
+//     console.log("çarşamba");
+//     break;
+//   case 4:
+//     console.log("perşembe");
+//     break;
+//   case 5:
+//     console.log("cuma");
+//     break;
+//   case 6:
+//     console.log("cumartesi");
+//     break;
+//   default:
+//     console.log("Böyle bir gün yok..");
+// }
+// ------------------FOR LOOP --------------------------
+// for (let i = 0; i < 3; i++) {
+//   console.log("i değerim: ", i);
+// }
+// let arr = [10, 20, 30, 40];
+// for (let item of arr) {
+//   console.log(item);
+// }
+// let str = "Alperen Aktuğ";
+// for (let item of str) {
+//   console.log(item);
+// }
+// içindeki değerleri dolaşıyor.
+// for (let item in str) {
+//   console.log(item);
+// }
+// içindeki index değerlerini dolaşıyor.
+// ------------WHILE LOOP ------------------------------
+var counter = 10;
+// while (counter < 5) {
+//   console.log(counter);
+//   counter++;
+//   if (counter == 3) break;
+// }
+do {
+    console.log(counter);
+    counter++;
+} while (counter < 5);

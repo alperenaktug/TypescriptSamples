@@ -3,8 +3,6 @@
 // let lastname: string = "Cena";
 // let isUpdated: boolean = true;
 
-
-
 // function display (id:number , name:string)
 // {
 //   console.log("Id = " + id + "Name = " + name);
@@ -12,11 +10,7 @@
 
 // ----------------Data Type:-----------------------
 
-
-
-
 // 1- NUMBER-----------------------------------------------------
-
 
 // let first:number = 123; //number
 // let second: number = 0x37CF ; // hexadecimal
@@ -28,34 +22,23 @@
 // console.log(third);
 // console.log(fourth);
 
-
-
-
 // 2- STRİNG ---------------------------------------------------
-
 
 // let  employeefirstName: string = "Muro";
 // let  employeefirstName: string = 'Muro';
 
 // console.log(employeefirstName);
 
-
 // let employeeName: string = "John Cena";
 // let employeeDept: string = "Under Taker";
-
 
 // let employeeDesc1: string = employeeName + " works in the " + employeeDept + " department.";
 
 // console.log(employeeDesc1);
 
-
 // let employeeDesc2: string = `${employeeName} works in the ${employeeDept} department.`
 
 // console.log(employeeDesc2)
-
-
-
-
 
 // 3- BOOLEAN------------------------------------------------
 
@@ -65,9 +48,6 @@
 // console.log(isPresent1);
 // console.log(isPresent2);
 
-
-
-
 // 4- ARRAY ---------------------------------------------------
 
 // let firstNames1: string[] = ['Burak' , 'Talip' , 'Mustafa'];
@@ -75,7 +55,6 @@
 
 // let firstNames2: Array<string> = ['Burak' , 'Talip' , 'Mustafa'];
 // console.log(firstNames2);
-
 
 // let fruits: Array<strings>;
 // fruits = ['Apple', 'Orange', 'Banana'];
@@ -101,13 +80,7 @@
 //   console.log(values2[i]);
 // }
 
-
-
-
-
 // 5- TUPLE ----------------------------------------------------
-
-
 
 // let Id: number = 1;
 // let instructorName: string = "purple";
@@ -116,16 +89,11 @@
 
 // console.log(instructor);
 
-
 // let employee: [number , string][];
 // employee = [[1,"red"] , [2, "blue"] , [3, "green"]];
 // console.log(employee);
 
-
-
-
 // 6- OBJECT -----------------------------------------------------
-
 
 // type Person1 = {
 //   firstName : string,
@@ -149,7 +117,6 @@
 //   console.log(instructor.firstName);
 //   console.log(instructor.age);
 
-
 // 2. gösterim
 
 // let Person2 :{
@@ -167,11 +134,7 @@
 
 // console.log(Person2);
 
-
-
-
 // 7- ENUM -----------------------------------------------------
-
 
 // enum Media {
 //   Newspaper = 1,
@@ -183,50 +146,34 @@
 // console.log(Media);
 // console.log(Media.Magazin);
 
-
-
-
 // enum PrintMedia  {
 //   Newspaper  = "NEWSPAPER",
 //   Newsletter = "NEWSLETTER",
 //   Magazin = "MAGAZİNE",
 //   Book = "BOOK"
- 
+
 // };
 // console.log(PrintMedia.Newsletter);
-
-
-
-
 
 // 8- UNION -----------------------------------------------------------
 
 // Tanımladığımız bir değişkene bir den fazla data type verebiliriz
 //  burada union u kullanırız .
 
-
 // let code : number | string | boolean ;
 
- // code = 123;
+// code = 123;
 
- // code = "papa";
+// code = "papa";
 
 // code = true ;
 
 // console.log(code);
 
-
-
-
-
 // 9- ANY -------------------------------------------------------------
-
-
 
 //  Type ı bilmiyorsak ve bir karmaşa varsa herhangi bir type dan türemiş
 //  gibi kullanılabilir. Bütün data type ları kabul ediyor .
-
-
 
 // let someThing1: any  = "Hello";
 // let someThing2: any  =  123;
@@ -236,25 +183,16 @@
 // console.log(someThing2);
 // console.log(someThing3);
 
-
-
-
-
-
 // 10- VOİD ----------------------------------------------------------
 
 // Bir fonksiyonda fonksiyon geriye değer döndürmüyorsa void kullanılır.
 
-
 // function sayHello(): void {
-  // let can = "can";
+// let can = "can";
 //   console.log("selam dünya");
-   // return can;
-// } 
+// return can;
+// }
 // sayHello();
-
-
-
 
 //  11- NEVER ----------------------------------------------------------
 
@@ -264,17 +202,91 @@
 
 // throwError("Hata");
 
-
-
-
-
 // -----------------------------------------------------------------------
 
+// ------------- If Else Ternary Operator--------------------------------
 
-// TYPE INFERENCE 
+// let x : number = 45;
+// let y : number = 45;
 
-// Data type ını yazmamama rağmen geliyor.
+// if(x > y)
+// {
+//   console.log("X Y DEN BÜYÜKTÜR.");
+// }
+// else if (x < y){
+//   console.log("X Y DEN KÜÇÜKTÜR.")
+// }
+// else{
+//   console.log(" X VE Y EŞİTTİR.")
+// }
 
+// x > y ?  console.log("X Y DEN BÜYÜKTÜR.") : console.log("X Y DEN KÜÇÜKTÜR.") : console.log(" X VE Y EŞİTTİR.")
 
-let sayac = 0 ;
-console.log(typeof(sayac))
+// ---------------SWITCH CASE--------------------------
+
+// let day: number = 5;
+// switch (day) {
+//   case 0:
+//     console.log("Pazar");
+//     break;
+//   case 1:
+//     console.log("Pazartesi");
+//     break;
+//   case 2:
+//     console.log("salı");
+//     break;
+//   case 3:
+//     console.log("çarşamba");
+//     break;
+//   case 4:
+//     console.log("perşembe");
+//     break;
+//   case 5:
+//     console.log("cuma");
+//     break;
+//   case 6:
+//     console.log("cumartesi");
+//     break;
+//   default:
+//     console.log("Böyle bir gün yok..");
+// }
+
+// ------------------FOR LOOP --------------------------
+
+// for (let i = 0; i < 3; i++) {
+//   console.log("i değerim: ", i);
+// }
+
+// let arr = [10, 20, 30, 40];
+
+// for (let item of arr) {
+//   console.log(item);
+// }
+
+// let str = "Alperen Aktuğ";
+
+// for (let item of str) {
+//   console.log(item);
+// }
+// içindeki değerleri dolaşıyor.
+
+// for (let item in str) {
+//   console.log(item);
+// }
+// içindeki index değerlerini dolaşıyor.
+
+// ------------WHILE LOOP ------------------------------
+
+let counter = 10;
+
+// while (counter < 5) {
+//   console.log(counter);
+//   counter++;
+
+//   if (counter == 3) break;
+// }
+
+do {
+  console.log(counter);
+  counter++;
+} while (counter < 5);
