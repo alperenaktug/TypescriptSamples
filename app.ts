@@ -472,25 +472,57 @@
 
 // ----------------------Static Methods -----------------------------
 
-class circle {
-  static pi: number = 3.14;
+// class circle {
+//   static pi: number = 3.14;
 
-  pi = 3;
+//   pi = 3;
 
-  constructor() {
-    circle.pi++;
+//   constructor() {
+//     circle.pi++;
+//   }
+
+//   static hesapla(yaricap: number) {
+//     return this.pi * yaricap * yaricap;
+//   }
+// }
+
+// let objem = new circle();
+// let objem2 = new circle();
+
+// console.log(objem.pi);
+
+// console.log(circle.pi);
+
+// console.log(circle.hesapla(5));
+
+//---------------  Abstract Class (soyut dınıf ) --------------------
+
+abstract class Department {
+  constructor(public name: string) {}
+
+  printName(): void {
+    console.log("Department name: " + this.name);
   }
 
-  static hesapla(yaricap: number) {
-    return this.pi * yaricap * yaricap;
-  }
+  abstract printMeeting(): void;
 }
 
-let objem = new circle();
-let objem2 = new circle();
+class AccountingDepartment extends Department {
+  constructor() {
+    super("Accounting and Auditing");
+  }
 
-console.log(objem.pi);
+  printMeeting(): void {
+    console.log("Iam always int the top shit");
+  }
 
-console.log(circle.pi);
+  generateReports(): void {
+    console.log("You are mad I am back..");
+  }
+}
+let 
 
-console.log(circle.hesapla(5));
+let Department = new AccountingDepartment();
+department.printName();
+department.printMeeting();
+department.generateReports();

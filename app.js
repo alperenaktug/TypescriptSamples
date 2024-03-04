@@ -2,6 +2,21 @@
 // let firstname: string = "John";
 // let lastname: string = "Cena";
 // let isUpdated: boolean = true;
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 // function display (id:number , name:string)
 // {
 //   console.log("Id = " + id + "Name = " + name);
@@ -331,19 +346,45 @@
 // let kisibilgim = new Person(43, "Jimmy", "Butler");
 // console.log(kisibilgim);
 // ----------------------Static Methods -----------------------------
-var circle = /** @class */ (function () {
-    function circle() {
-        this.pi = 3;
-        circle.pi++;
+// class circle {
+//   static pi: number = 3.14;
+//   pi = 3;
+//   constructor() {
+//     circle.pi++;
+//   }
+//   static hesapla(yaricap: number) {
+//     return this.pi * yaricap * yaricap;
+//   }
+// }
+// let objem = new circle();
+// let objem2 = new circle();
+// console.log(objem.pi);
+// console.log(circle.pi);
+// console.log(circle.hesapla(5));
+//---------------  Abstract Class (soyut dınıf ) --------------------
+var Department = /** @class */ (function () {
+    function Department(name) {
+        this.name = name;
     }
-    circle.hesapla = function (yaricap) {
-        return this.pi * yaricap * yaricap;
+    Department.prototype.printName = function () {
+        console.log("Department name: " + this.name);
     };
-    circle.pi = 3.14;
-    return circle;
+    return Department;
 }());
-var objem = new circle();
-var objem2 = new circle();
-console.log(objem.pi);
-console.log(circle.pi);
-console.log(circle.hesapla(5));
+var AccountingDepartment = /** @class */ (function (_super) {
+    __extends(AccountingDepartment, _super);
+    function AccountingDepartment() {
+        return _super.call(this, "Accounting and Auditing") || this;
+    }
+    AccountingDepartment.prototype.printMeeting = function () {
+        console.log("Iam always int the top shit");
+    };
+    AccountingDepartment.prototype.generateReports = function () {
+        console.log("You are mad I am back..");
+    };
+    return AccountingDepartment;
+}(Department));
+var let, Department = new AccountingDepartment();
+department.printName();
+department.printMeeting();
+department.generateReports();
