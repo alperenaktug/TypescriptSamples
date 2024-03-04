@@ -331,3 +331,19 @@
 // let kisibilgim = new Person(43, "Jimmy", "Butler");
 // console.log(kisibilgim);
 // ----------------------Static Methods -----------------------------
+var circle = /** @class */ (function () {
+    function circle() {
+        this.pi = 3;
+        circle.pi++;
+    }
+    circle.hesapla = function (yaricap) {
+        return this.pi * yaricap * yaricap;
+    };
+    circle.pi = 3.14;
+    return circle;
+}());
+var objem = new circle();
+var objem2 = new circle();
+console.log(objem.pi);
+console.log(circle.pi);
+console.log(circle.hesapla(5));

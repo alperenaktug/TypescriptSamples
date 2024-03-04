@@ -471,3 +471,26 @@
 // console.log(kisibilgim);
 
 // ----------------------Static Methods -----------------------------
+
+class circle {
+  static pi: number = 3.14;
+
+  pi = 3;
+
+  constructor() {
+    circle.pi++;
+  }
+
+  static hesapla(yaricap: number) {
+    return this.pi * yaricap * yaricap;
+  }
+}
+
+let objem = new circle();
+let objem2 = new circle();
+
+console.log(objem.pi);
+
+console.log(circle.pi);
+
+console.log(circle.hesapla(5));
