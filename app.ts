@@ -204,23 +204,25 @@
 
 // -----------------------------------------------------------------------
 
+// TYPE INFERENCE:
+
+// Data type ını yazmamama rağmen geliyor.
+
+// let sayac = 0 ;
+// console.log(typeof(sayac))
+
+// TYPE ASSORTION:
+
 // ------------- If Else Ternary Operator--------------------------------
 
-// let x : number = 45;
-// let y : number = 45;
+// let x: number = 45;
+// let y: number = 45;
 
-// if(x > y)
-// {
-//   console.log("X Y DEN BÜYÜKTÜR.");
-// }
-// else if (x < y){
-//   console.log("X Y DEN KÜÇÜKTÜR.")
-// }
-// else{
-//   console.log(" X VE Y EŞİTTİR.")
-// }
-
-// x > y ?  console.log("X Y DEN BÜYÜKTÜR.") : console.log("X Y DEN KÜÇÜKTÜR.") : console.log(" X VE Y EŞİTTİR.")
+// x > y
+// ? console.log("X Y DEN BÜYÜKTÜR.")
+//   : x < y
+//   ? console.log("X Y DEN KÜÇÜKTÜR.")
+//   : console.log(" X VE Y EŞİTTİR.");
 
 // ---------------SWITCH CASE--------------------------
 
@@ -257,27 +259,25 @@
 //   console.log("i değerim: ", i);
 // }
 
-// let arr = [10, 20, 30, 40];
+// let arr: number[] = [10, 20, 30, 40];
 
 // for (let item of arr) {
 //   console.log(item);
 // }
 
-// let str = "Alperen Aktuğ";
+// let str: string = "Alperen Aktuğ";
 
 // for (let item of str) {
 //   console.log(item);
 // }
-// içindeki değerleri dolaşıyor.
 
 // for (let item in str) {
 //   console.log(item);
 // }
-// içindeki index değerlerini dolaşıyor.
 
 // ------------WHILE LOOP ------------------------------
 
-let counter = 10;
+// let counter: number = 10;
 
 // while (counter < 5) {
 //   console.log(counter);
@@ -286,7 +286,188 @@ let counter = 10;
 //   if (counter == 3) break;
 // }
 
-do {
-  console.log(counter);
-  counter++;
-} while (counter < 5);
+// do {
+//   console.log(counter);
+//   counter++;
+// } while (counter < 5);
+
+// ----------------FUNCTION-------------------------------
+
+// function add(a: number, b: number): number {
+//   return a + b;
+// }
+
+// let toplam: number = add(23, 20);
+// console.log(toplam);
+// console.log(typeof toplam);
+
+// function bastir(): void {
+//   console.log("Polat Alemdar");
+// }
+
+// bastir();
+
+// function birlestir(ad: string, soyad: string): string {
+//   return ad + " " + soyad;
+// }
+
+// let degisken: string = birlestir("Alp", "Korkmaz");
+
+// console.log(degisken);
+
+//-------OPTIONAL PARAMETERS ARROW FUNCTION --------------
+
+// function carpim(a: number, b: number, c?: number) {
+//   if (typeof c !== "undefined") {
+//     return a * b * c;
+//   }
+//   return;
+// }
+
+// let degisken = carpim(5, 6, 3);
+
+// console.log(degisken);
+
+// function carpim(a: number, b: number): number {
+//   return a * b;
+// }
+
+// let carpim = (a: number, b: number): number => {
+//   return a * b;
+// };
+
+// let degisken = carpim(4, 5);
+
+// console.log(degisken);
+
+// let bastir = () => {
+//   console.log("Polat Alemdar");
+// };
+
+// bastir();
+
+//----------------Function Overloading----------------------------------
+
+// function add(a: string, b: string): string;
+// function add(a: number, b: number): number;
+
+// function add(a: any, b: any): any {
+//   return a + b;
+// }
+
+// let degisken = add(5, 9);
+// console.log(degisken);
+
+// ----------------Rest Parameters-------------------------------------
+
+// function sum(...numbers: number[]): number {
+//   let total = 0;
+//   numbers.forEach((num) => (total += num));
+//   return total;
+// }
+// console.log(sum(10, 20));
+
+// -----------------------  CLASS  ------------------------------------
+
+// class Person {
+//   id: number;
+//   firstname: string;
+//   lastname: string;
+
+//   constructor(id: number, firstname: string, lastname: string) {
+//     this.id = id;
+//     this.firstname = firstname;
+//     this.lastname = lastname;
+//   }
+
+//   getFullName() {
+//     return `${this.firstname} ${this.lastname}`;
+//   }
+//   getId() {
+//     return `${this.id}`;
+//   }
+// }
+
+// let kisibilgim = new Person(43, "Jimmy", "Butler");
+
+// console.log(kisibilgim);
+
+// console.log(kisibilgim.getFullName());
+
+// console.log(kisibilgim.getId());
+
+// --------------Access Modifiers(public , private , protected)----------
+
+// class Person {
+//   public id: number;
+//   private firstname: string;
+//   protected lastname: string;
+
+//   constructor(id: number, firstname: string, lastname: string) {
+//     this.id = id;
+//     this.firstname = firstname;
+//     this.lastname = lastname;
+//   }
+// }
+
+// let kisibilgim = new Person(43, "Jimmy", "Butler");
+
+// console.log(kisibilgim);
+
+// public heryerden erişim  , private sadece class ın içinden erişim , protected class ve subclass dan erişim yine class dışından erişim yok.
+
+// ----------------------Readonly -----------------------------------
+
+// class Person {
+//   readonly id: number;
+//   private firstname: string;
+//   protected lastname: string;
+
+//   constructor(id: number, firstname: string, lastname: string) {
+//     this.id = id;
+//     this.firstname = firstname;
+//     this.lastname = lastname;
+//   }
+// }
+
+// let kisibilgim = new Person(43, "Jimmy", "Butler");
+// kisibilgim.id = 5;
+
+// console.log(kisibilgim);
+
+// readonly le ekrana yazdırabiliriz değeri fakat değiştiremeyiz.
+
+// -----------------------Inhertiance --------------------------------
+
+// class Person {
+//   id: number;
+//   firstname: string;
+//   lastname: string;
+
+//   constructor(id: number, firstname: string, lastname: string) {
+//     this.id = id;
+//     this.firstname = firstname;
+//     this.lastname = lastname;
+//   }
+
+//   getFullName() {
+//     return `${this.firstname} ${this.lastname}`;
+//   }
+// }
+
+// class Employee extends Person {
+//   constructor(id: number, firstname: string, lastname: string) {
+//     super(id, firstname, lastname);
+//   }
+// }
+
+// let employee = new Employee(29, "Vito", "Carleone");
+// console.log(employee);
+
+// console.log(employee.getFullName());
+
+// let kisibilgim = new Person(43, "Jimmy", "Butler");
+
+// console.log(kisibilgim);
+
+// ----------------------Static Methods -----------------------------
