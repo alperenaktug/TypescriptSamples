@@ -497,32 +497,66 @@
 
 //---------------  Abstract Class (soyut dınıf ) --------------------
 
-abstract class Department {
-  constructor(public name: string) {}
+// abstract class Department {
+//   constructor(public name: string) {}
 
-  printName(): void {
-    console.log("Department name: " + this.name);
-  }
+//   printName(): void {
+//     console.log("Department name: " + this.name);
+//   }
 
-  abstract printMeeting(): void;
-}
+//   abstract printMeeting(): void;
+// }
 
-class AccountingDepartment extends Department {
-  constructor() {
-    super("Accounting and Auditing");
-  }
+// class AccountingDepartment extends Department {
+//   constructor() {
+//     super("Accounting and Auditing");
+//   }
 
-  printMeeting(): void {
-    console.log("Iam always int the top shit");
-  }
+//   printMeeting(): void {
+//     console.log("Iam always int the top shit");
+//   }
 
-  generateReports(): void {
-    console.log("You are mad I am back..");
-  }
-}
-let 
+//   generateReports(): void {
+//     console.log("You are mad I am back..");
+//   }
+// }
+// let
 
-let Department = new AccountingDepartment();
-department.printName();
-department.printMeeting();
-department.generateReports();
+// let department = new AccountingDepartment();
+// department.printName();
+// department.printMeeting();
+// department.generateReports();
+
+//-------------------Interface --------------------------------------
+
+// TypeScript'te "interface" (arayüz) kavramı, bir nesnenin yapısını tanımlamak için kullanılan bir özelliktir. Bu yapının içinde sadece tür bilgileri bulunur, dolayısıyla derleme aşamasında interface'lerden herhangi bir kod üretimi gerçekleşmez. İnterface'ler genellikle bir nesnenin sahip olması gereken özellikleri ve bu özelliklerin türlerini belirtmek için kullanılır.
+
+// interface Kisi {
+//   ad: string;
+//   yas: number;
+// }
+
+// function kisiBilgisiGoster(kisi: Kisi) {
+//   console.log(`Ad: ${kisi.ad}, Yaş: ${kisi.yas}`);
+// }
+
+// let insan: Kisi = { ad: "Ahmet", yas: 30 };
+// kisiBilgisiGoster(insan);
+
+// interface Person {
+//   firstname: string;
+//   lastname: string;
+//   age: number;
+// }
+
+// function getFullName(person: Person) {
+//   return `Adı : ${person.firstname} |  Soyadı : ${person.lastname} | Yaşı : ${person.age} `;
+// }
+
+// let person = {
+//   firstname: "James",
+//   lastname: "Harden",
+//   age: 24,
+// };
+
+// console.log(getFullName(person));

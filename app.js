@@ -2,21 +2,6 @@
 // let firstname: string = "John";
 // let lastname: string = "Cena";
 // let isUpdated: boolean = true;
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 // function display (id:number , name:string)
 // {
 //   console.log("Id = " + id + "Name = " + name);
@@ -362,29 +347,51 @@ var __extends = (this && this.__extends) || (function () {
 // console.log(circle.pi);
 // console.log(circle.hesapla(5));
 //---------------  Abstract Class (soyut dınıf ) --------------------
-var Department = /** @class */ (function () {
-    function Department(name) {
-        this.name = name;
-    }
-    Department.prototype.printName = function () {
-        console.log("Department name: " + this.name);
-    };
-    return Department;
-}());
-var AccountingDepartment = /** @class */ (function (_super) {
-    __extends(AccountingDepartment, _super);
-    function AccountingDepartment() {
-        return _super.call(this, "Accounting and Auditing") || this;
-    }
-    AccountingDepartment.prototype.printMeeting = function () {
-        console.log("Iam always int the top shit");
-    };
-    AccountingDepartment.prototype.generateReports = function () {
-        console.log("You are mad I am back..");
-    };
-    return AccountingDepartment;
-}(Department));
-var let, Department = new AccountingDepartment();
-department.printName();
-department.printMeeting();
-department.generateReports();
+// abstract class Department {
+//   constructor(public name: string) {}
+//   printName(): void {
+//     console.log("Department name: " + this.name);
+//   }
+//   abstract printMeeting(): void;
+// }
+// class AccountingDepartment extends Department {
+//   constructor() {
+//     super("Accounting and Auditing");
+//   }
+//   printMeeting(): void {
+//     console.log("Iam always int the top shit");
+//   }
+//   generateReports(): void {
+//     console.log("You are mad I am back..");
+//   }
+// }
+// let
+// let department = new AccountingDepartment();
+// department.printName();
+// department.printMeeting();
+// department.generateReports();
+//-------------------Interface --------------------------------------
+// TypeScript'te "interface" (arayüz) kavramı, bir nesnenin yapısını tanımlamak için kullanılan bir özelliktir. Bu yapının içinde sadece tür bilgileri bulunur, dolayısıyla derleme aşamasında interface'lerden herhangi bir kod üretimi gerçekleşmez. İnterface'ler genellikle bir nesnenin sahip olması gereken özellikleri ve bu özelliklerin türlerini belirtmek için kullanılır.
+// interface Kisi {
+//   ad: string;
+//   yas: number;
+// }
+// function kisiBilgisiGoster(kisi: Kisi) {
+//   console.log(`Ad: ${kisi.ad}, Yaş: ${kisi.yas}`);
+// }
+// let insan: Kisi = { ad: "Ahmet", yas: 30 };
+// kisiBilgisiGoster(insan);
+// interface Person {
+//   firstname: string;
+//   lastname: string;
+//   age: number;
+// }
+// function getFullName(person: Person) {
+//   return `Adı : ${person.firstname} |  Soyadı : ${person.lastname} | Yaşı : ${person.age} `;
+// }
+// let person = {
+//   firstname: "James",
+//   lastname: "Harden",
+//   age: 24,
+// };
+// console.log(getFullName(person));
