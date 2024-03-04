@@ -560,3 +560,70 @@
 // };
 
 // console.log(getFullName(person));
+
+// ----------Interface Extend Etme --------------------------
+
+// TypeScript'te bir interface'in başka bir interface'i "extend" etmesi, yani genişletmesi mümkündür. Bu, bir interface'in başka bir interface'in tüm özelliklerini almasını ve bu özelliklere ek olarak kendi özelliklerini de tanımlamasını sağlar. Böylece, kod tekrarını azaltabilir ve daha modüler yapılar oluşturabilirsiniz.
+
+// interface Hayvan {
+//   tur: string;
+//   yas: number;
+//   sesCikar(): void;
+// }
+
+// interface Kopek extends Hayvan {
+//   tur: string;
+//   yas: number;
+//   sesCikar(): void;
+//   kuyrukSalla(): void;
+// }
+
+// class GoldenRetriever implements Kopek {
+//   tur: string;
+//   yas: number;
+
+//   constructor(tur: string, yas: number) {
+//       this.tur = tur;
+//       this.yas = yas;
+//   }
+
+//   sesCikar() {
+//       console.log("Hav hav!");
+//   }
+
+//   kuyrukSalla() {
+//       console.log("Kuyruk sallanıyor!");
+//   }
+// }
+
+// let kopek: Kopek = new GoldenRetriever("Golden Retriever", 3);
+// kopek.sesCikar(); // "Hav hav!"
+// kopek.kuyrukSalla(); // "Kuyruk sallanıyor!"
+
+// interface IPerson {
+//   name: string;
+//   gender: string;
+// }
+
+// interface IEmployee extends IPerson {
+//   empNumber: number;
+// }
+
+// let employee: IEmployee = {
+//   empNumber: 1,
+//   gender: "male",
+//   name: "Moriarty",
+// };
+
+// console.log(employee);
+
+// interface IPerson {
+//   name: string;
+//   gender: string;
+// }
+
+// class Employee implements IPerson {
+//   empNumber: number;
+//   name: string;
+//   gender: string;
+// }
