@@ -627,3 +627,59 @@
 //   name: string;
 //   gender: string;
 // }
+
+// ---------------------   GENERİCS   -----------------------------------
+
+// function getRandomNumber(items: number[]): number {
+//   let randomIndex = Math.floor(Math.random() * items.length);
+
+//   return items[randomIndex];
+// }
+
+// let numbers = [1, 54, 65, 76, 86, 97];
+
+// console.log(getRandomNumber(numbers));
+// function getRandomString(items: string[]): string {
+//   let randomIndex = Math.floor(Math.random() * items.length);
+
+//   return items[randomIndex];
+// }
+
+// let adlarim = ["can", "ali", "ayşe", "fatma"];
+
+// console.log(getRandomString(adlarim));
+
+// let degiskenlerim = [true, false, true];
+// function getRandomElement<T>(items: T[]): T {
+//   let randomIndex = Math.floor(Math.random() * items.length);
+//   return items[randomIndex];
+// }
+// console.log(getRandomElement<number>(numbers));
+// console.log(getRandomElement<string>(adlarim));
+// console.log(getRandomElement<boolean>(degiskenlerim));
+
+// -------------------Generic Constraints ---------------------------
+
+// function merge<U extends object, V extends object>(obj1: U, obj2: V) {
+//   return {
+//     ...obj1,
+//     ...obj2,
+//   };
+// }
+
+// let person = merge({ name: "Faruk" }, { age: 28 });
+// console.log(person);
+
+// --------------Generic İnterface -----------------------------
+
+// interface Months<U, V> {
+//   key: U;
+//   value: V;
+// }
+
+// let month: Months<number, string> = {
+//   key: 1,
+//   value: "January",
+// };
+
+// console.log(month);
